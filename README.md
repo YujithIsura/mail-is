@@ -48,5 +48,21 @@ The identity server dockerfile build genaric docker images from wso2 is official
             <KeyPassword>adminlsf</KeyPassword>
         </InternalKeyStore>
         
- 3. Change catalina-server.xml file in
+  3. Change catalina-server.xml file in /product-is/ldap_dep/ directory
+ 
+     change keystorePass as you used when creating keystore
+    
   
+                   SSLEnabled="true"
+                   compressionMinSize="2048"
+                   noCompressionUserAgents="gozilla, traviata"
+                   compressableMimeType="text/html,text/javascript,application/x-javascript,application/javascript,application                                          /xml,text/css,application/xslt+xml,text/xsl,image/gif,image/jpg,image/jpeg"
+                   keystoreFile="${carbon.home}/repository/resources/security/wso2carbon.jks"
+                   keystorePass="adminlsf"
+                   URIEncoding="UTF-8"/>
+                   
+ ## How to use
+ 
+    run following command on command line in mail-is directory
+    
+  ###  sh iam-up.sh
