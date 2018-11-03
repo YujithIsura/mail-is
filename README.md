@@ -65,4 +65,8 @@ The identity server dockerfile build genaric docker images from wso2 is official
  
     run following command on command line in mail-is directory
     
-  ###  sh iam-up.sh
+  ###  #sh iam-up.sh
+  
+       you can wso2 is on browser using https://localhost:9443/carbon/
+       wso2 is end user dashboard using https://localhost:9443/dashboard/
+       access openLDAP using http://localhost:8888/
