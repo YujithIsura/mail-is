@@ -70,3 +70,8 @@ The identity server dockerfile build genaric docker images from wso2 is official
        you can wso2 is on browser using https://localhost:9443/carbon/
        wso2 is end user dashboard using https://localhost:9443/dashboard/
        access openLDAP using http://localhost:8888/
+### Usefull dock when configuring
+
+       https://medium.com/@technospace/creating-new-keystores-in-wso2-products-d61cde7d456
+       https://docs.wso2.com/display/ADMIN44x/Configuring+Keystores+in+WSO2+Products
+       https://docs.wso2.com/display/ADMIN44x/Creating+New+Keystores
