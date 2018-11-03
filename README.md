@@ -18,7 +18,35 @@ The identity server dockerfile build genaric docker images from wso2 is official
 
  #### keytool -genkey -alias wso2 -keyalg RSA -keystore wso2carbon.jks -keysize 2048
  
-2. Change carbon.xml file in <PRODUCT_HOME>/repository/conf/ directory
+2. Change carbon.xml file in /product-is/ldap_dep/ directory
    
-   Do following changes
+    use password when you used to create keystore for <KeyPassword> and use aliias as you used in above command in <KeyAlias>
+         
+       <KeyStore>
+            <!-- Keystore file location-->
+            <Location>${carbon.home}/repository/resources/security/wso2carbon.jks</Location>
+            <!-- Keystore type (JKS/PKCS12 etc.)-->
+            <Type>JKS</Type>
+            <!-- Keystore password-->
+            <Password>adminlsf</Password>
+            <!-- Private Key alias-->
+            <KeyAlias>wso2</KeyAlias>
+            <!-- Private Key password-->
+            <KeyPassword>adminlsf</KeyPassword>
+        </KeyStore>
+
+        <InternalKeyStore>
+            <!-- Keystore file location-->
+            <Location>${carbon.home}/repository/resources/security/wso2carbon.jks</Location>
+            <!-- Keystore type (JKS/PKCS12 etc.)-->
+            <Type>JKS</Type>
+            <!-- Keystore password-->
+            <Password>adminlsf</Password>
+            <!-- Private Key alias-->
+            <KeyAlias>wso2</KeyAlias>
+            <!-- Private Key password-->
+            <KeyPassword>adminlsf</KeyPassword>
+        </InternalKeyStore>
+        
+ 3. Change catalina-server.xml file in
   
