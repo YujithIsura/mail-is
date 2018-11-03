@@ -14,7 +14,7 @@ The identity server dockerfile build genaric docker images from wso2 is official
 
 1. Create a keystore using a new certificate
 
-    using following command you can create new keystore
+    using following command you can create new keystore. Make sure to replace wso2carbon.jks in mail-is using new keystore if you are changing.
 
  #### keytool -genkey -alias wso2 -keyalg RSA -keystore wso2carbon.jks -keysize 2048
  
