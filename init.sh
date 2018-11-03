@@ -89,4 +89,5 @@ test -d ${volumes}/ && cp -R ${volumes}/* ${WSO2_SERVER_HOME}/
 sed -i "s#<parameter\ name=\"localMemberHost\".*<\/parameter>#<parameter\ name=\"localMemberHost\">${docker_container_ip}<\/parameter>#" ${WSO2_SERVER_HOME}/repository/conf/axis2/axis2.xml
 
 # start the WSO2 Carbon server
+
 sh ${WSO2_SERVER_HOME}/bin/wso2server.sh
